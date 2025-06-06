@@ -1,2 +1,0 @@
-{0: '12 weeks post-conception', 1: '13 weeks post-conception', 2: '33 days', 3: '35 days', 4: '37 days', 5: '41 days', 6: '53 days', 7: '58 days', 8: '65 days'} 
-{'12 weeks post-conception': 0, '13 weeks post-conception': 1, '33 days': 2, '35 days': 3, '37 days': 4, '41 days': 5, '53 days': 6, '58 days': 7, '65 days': 8} 
