@@ -35,26 +35,23 @@ This project explores a novel dimensionality reduction technique called **K-Near
 - **Preprocessing and parameter tuning** are crucial for optimal performance.
 
 ## References
-```python
-# Cottrell, S., Hozumi, Y., & Wei, G. W. (2023).
-# "K-Nearest-Neighbors Induced Topological PCA for Single Cell RNA-Sequence Data Analysis"
-# arXiv:2310.14521. https://arxiv.org/abs/2310.14521
+Cottrell, S., Hozumi, Y., & Wei, G. W. (2023).
+"K-Nearest-Neighbors Induced Topological PCA for Single Cell RNA-Sequence Data Analysis"
+arXiv:2310.14521. https://arxiv.org/abs/2310.14521
 
-# Jiang, R., Sun, T., Song, D., & Li, J. J. (2022).
-# "Statistics or biology: the zero-inflation controversy about scRNA-seq data"
-# Genome Biology, 23(31). https://doi.org/10.1186/s13059-022-02601-5
+Jiang, R., Sun, T., Song, D., & Li, J. J. (2022).
+"Statistics or biology: the zero-inflation controversy about scRNA-seq data"
+Genome Biology, 23(31). https://doi.org/10.1186/s13059-022-02601-5
 
-# Jolliffe, I. T. (2002).
-# "Principal Component Analysis, Second Edition"
-# Springer. http://cda.psych.uiuc.edu/statistical_learning_course/Jolliffe_PCA_2ed.pdf
+Jolliffe, I. T. (2002).
+"Principal Component Analysis, Second Edition"
+Springer. http://cda.psych.uiuc.edu/statistical_learning_course/Jolliffe_PCA_2ed.pdf
 
-# Lähnemann, D., et al. (2020).
-# "Eleven grand challenges in single-cell data science"
-# Genome Biology, 21(31). https://doi.org/10.1186/s13059-020-1926-6
+Lähnemann, D., et al. (2020).
+"Eleven grand challenges in single-cell data science"
+Genome Biology, 21(31). https://doi.org/10.1186/s13059-020-1926-6
 
 ## Acknowledgments
-# This project was developed as part of BIPN 162: Neural Data Science
-# at the University of California, San Diego.
+This project was developed as part of BIPN 162: Neural Data Science at the University of California, San Diego.
 
-# We would like to thank Dr. Mikio Aoi for his guidance, feedback,
-# and support throughout the project.
+We would like to thank Dr. Mikio Aoi for his guidance, feedback, and support throughout the project.
