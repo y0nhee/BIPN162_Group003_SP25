@@ -38,38 +38,43 @@ This project explores a novel dimensionality reduction technique called **K-Near
 
 This project includes four Jupyter notebooks used for processing, analyzing, and visualizing the scRNA-seq datasets using PCA, sPCA, and kNN-tPCA.
 
-## notebooks/
-├── (Final Ver. w_ annotations) GSE72056_Processing.ipynb
-│ └── Processes the new melanoma dataset (GSE72056):
-│ - Loads the raw expression matrix
-│ - Downsamples to 700 cells for consistency
-│ - Performs normalization, log transformation, and gene filtering
-│ - Applies PCA, sPCA, and kNN-tPCA
-│ - Evaluates clustering with ARI, NMI, ECS
-│ - Generates 2D projections and heatmaps
-│
-├── PCA_Clustering_GSE82187 (With annotations).ipynb
-│ └── Applies standard PCA to GSE82187:
-│ - Preprocesses gene expression matrix
-│ - Reduces dimensions with PCA
-│ - Clusters with K-means
-│ - Calculates ARI, NMI, ECS
-│ - Produces visualizations for evaluation
-│
-├── sPCA_Clustering_GSE82187.ipynb
-│ └── Applies Sparse PCA to GSE82187:
-│ - Uses same preprocessing as PCA
-│ - Applies sPCA with sparsity constraints
-│ - Performs K-means clustering
-│ - Evaluates with ARI, NMI, ECS
-│ - Visualizes results in 2D space
-│
-├── tPCA_Clustering_GSE82187 (3) (1).ipynb
-│ └── Implements kNN-tPCA on GSE82187:
-│ - Applies topological PCA using persistent Laplacians
-│ - Preserves topological structure in embedding
-│ - Clusters data and evaluates accuracy
-│ - Generates t-SNE, UMAP, and heatmap plots
+## 📓 Notebooks Directory
+
+This project includes four Jupyter notebooks used for processing, analyzing, and visualizing the scRNA-seq datasets using PCA, sPCA, and kNN-tPCA.
+
+### `notebooks/`
+
+- **(Final Ver. w_ annotations) GSE72056_Processing.ipynb**  
+  Processes the new melanoma dataset (GSE72056):
+  - Loads the raw expression matrix
+  - Downsamples to 700 cells for consistency
+  - Performs normalization, log transformation, and gene filtering
+  - Applies PCA, sPCA, and kNN-tPCA
+  - Evaluates clustering with ARI, NMI, and ECS
+  - Generates 2D projections and heatmaps
+
+- **PCA_Clustering_GSE82187 (With annotations).ipynb**  
+  Applies standard PCA to GSE82187:
+  - Preprocesses gene expression matrix
+  - Reduces dimensions with PCA
+  - Clusters with K-means
+  - Calculates ARI, NMI, and ECS
+  - Produces visualizations for evaluation
+
+- **sPCA_Clustering_GSE82187.ipynb**  
+  Applies Sparse PCA to GSE82187:
+  - Uses same preprocessing as PCA
+  - Applies sPCA with sparsity constraints
+  - Performs K-means clustering
+  - Evaluates with ARI, NMI, and ECS
+  - Visualizes results in 2D space
+
+- **tPCA_Clustering_GSE82187 (3) (1).ipynb**  
+  Implements kNN-tPCA on GSE82187:
+  - Applies topological PCA using persistent Laplacians
+  - Preserves topological structure in embedding
+  - Clusters data and evaluates accuracy
+  - Generates t-SNE, UMAP, and heatmap plots
 
 ## References
 Cottrell, S., Hozumi, Y., & Wei, G. W. (2023).
