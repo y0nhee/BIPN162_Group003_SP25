@@ -53,5 +53,3 @@ Genome Biology, 21(31). https://doi.org/10.1186/s13059-020-1926-6
 
 ## Acknowledgments
 This project was developed as part of BIPN 162: Neural Data Science at the University of California, San Diego.
-
-We would like to thank Dr. Mikio Aoi for his guidance, feedback, and support throughout the project.
