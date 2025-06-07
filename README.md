@@ -1,52 +1,60 @@
-# BIPN162_Group003_SP25
-UC San Diego – BIPN 162 Final Project
-Authors: Irene Eu, Dora Deng, Joshua La
+# K-Nearest-Neighbors Induced Topological PCA for Single-Cell RNA-Seq Data Analysis  
+**BIPN 162 Final Project - UC San Diego**  
+**Authors:** Irene Eu, Dora Deng, Joshua La
 
-Overview
-This project investigates a novel dimensionality reduction technique, K-Nearest-Neighbors Induced Topological PCA (kNN-tPCA), for analyzing high-dimensional single-cell RNA sequencing (scRNA-seq) data. Based on the method proposed by Cottrell et al. (2023), we evaluate the model’s performance in capturing complex gene expression structures across diverse cell types, comparing it to traditional approaches like PCA and sPCA.
+## Overview
+This project explores a novel dimensionality reduction technique called **K-Nearest-Neighbors Induced Topological PCA (kNN-tPCA)** for analyzing high-dimensional single-cell RNA sequencing (scRNA-seq) data. Based on the work by *Cottrell et al. (2023)*, we replicate and evaluate this method's performance in clustering and structure preservation compared to traditional methods like PCA and sPCA.
 
-Goals
-Replicate the original paper’s pipeline on a benchmark dataset (GSE82187)
+## Goals
+- **Replicate** kNN-tPCA on a benchmark dataset (GSE82187)
+- **Apply** the model to a new scRNA-seq dataset (GSE72056 - melanoma tumors)
+- **Evaluate** clustering performance using:
+  - Adjusted Rand Index (ARI)
+  - Normalized Mutual Information (NMI)
+  - Element-Centric Similarity (ECS)
+- **Visualize** results using 2D embeddings and heatmaps
 
-Apply kNN-tPCA to a new dataset (GSE72056 - human melanoma tumor cells)
+## Datasets
+- **GSE82187**: Mouse brain dataset used for replication
+- **GSE72056**: Human melanoma tumor dataset used for testing generalizability
 
-Evaluate the dimensionality reduction and clustering performance using:
+## Methods
+- **Preprocessing**: Log-transform, variance filtering, normalization
+- **Dimensionality Reduction**:
+  - `kNN-tPCA`: topological regularization using persistent Laplacians
+  - `sPCA`: sparse PCA for noise reduction
+  - `PCA`: standard linear dimensionality reduction
+- **Clustering**: K-means (repeated 30 times)
+- **Evaluation**: ARI, NMI, ECS metrics
+- **Visualization**: t-SNE, UMAP, bar plots, heatmaps
 
-Adjusted Rand Index (ARI)
+## Key Findings
+- **GSE82187**: Results closely matched the original paper; kNN-tPCA outperformed other models.
+- **GSE72056**: Unexpectedly, **sPCA** performed best across all metrics.
+- The complex and noisy nature of tumor data may hinder the performance of topological methods like kNN-tPCA.
+- **Preprocessing and parameter tuning** are crucial for optimal performance.
 
-Normalized Mutual Information (NMI)
+## References
+```python
+# Cottrell, S., Hozumi, Y., & Wei, G. W. (2023).
+# "K-Nearest-Neighbors Induced Topological PCA for Single Cell RNA-Sequence Data Analysis"
+# arXiv:2310.14521. https://arxiv.org/abs/2310.14521
 
-Element-Centric Similarity (ECS)
+# Jiang, R., Sun, T., Song, D., & Li, J. J. (2022).
+# "Statistics or biology: the zero-inflation controversy about scRNA-seq data"
+# Genome Biology, 23(31). https://doi.org/10.1186/s13059-022-02601-5
 
-Visualize the results using 2D projections, heatmaps, and cluster comparison plots
+# Jolliffe, I. T. (2002).
+# "Principal Component Analysis, Second Edition"
+# Springer. http://cda.psych.uiuc.edu/statistical_learning_course/Jolliffe_PCA_2ed.pdf
 
-Datasets
-GSE82187: Mouse brain scRNA-seq dataset used to replicate the original study.
+# Lähnemann, D., et al. (2020).
+# "Eleven grand challenges in single-cell data science"
+# Genome Biology, 21(31). https://doi.org/10.1186/s13059-020-1926-6
 
-GSE72056: Human melanoma scRNA-seq dataset used to test model generalizability.
+## Acknowledgments
+# This project was developed as part of BIPN 162: Neural Data Science
+# at the University of California, San Diego.
 
-Methods
-Data preprocessing: normalization, log-transform, gene variance filtering
-
-Dimensionality reduction:
-
-kNN-tPCA (Topological PCA + persistent Laplacians)
-
-Sparse PCA (sPCA)
-
-Principal Component Analysis (PCA)
-
-Clustering: K-means (repeated 30 times for consistency)
-
-Evaluation: ARI, NMI, ECS
-
-Visualization: t-SNE, UMAP, heatmaps, and bar plots
-
-Key Findings
-kNN-tPCA successfully reproduced results from the original study on GSE82187.
-
-On the new GSE72056 dataset, sPCA outperformed kNN-tPCA across all metrics.
-
-The biological complexity and heterogeneity in the tumor dataset may challenge topological methods that assume cleaner neighbor structures.
-
-Preprocessing decisions (e.g., parameter tuning, rare cell filtering) heavily impact performance.
+# We would like to thank Dr. Mikio Aoi for his guidance, feedback,
+# and support throughout the project.
